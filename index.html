@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0a2463">
+    <title>Ndia TVC - Roadshow Portal 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="https://iili.io/fyaZpEX.png">
+    <style>
+        * {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-touch-callout: none;
+        }
+        
+        body {
+            overscroll-behavior: none;
+            overflow-x: hidden;
+        }
+        
+        img {
+            pointer-events: none;
+            -webkit-user-drag: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Background Logo -->
+    <div class="bg-logo-container">
+        <img src="https://iili.io/fyaZpEX.png" alt="Ndia TVC Background" class="bg-logo">
+        <div class="bg-overlay"></div>
+    </div>
+
+    <!-- Canvas Introduction Animation -->
+    <div id="intro-canvas" class="intro-container">
+        <div class="canvas-wrapper">
+            <canvas id="busCanvas"></canvas>
+            <div class="student-waving" id="studentWave">
+                <div class="student-emoji">🎓</div>
+                <div class="wave-hand">👋</div>
+            </div>
+        </div>
+        <div class="intro-content">
+            <div class="text-effect">
+                <h1 class="roadshow-title">BUS ROADSHOW</h1>
+                <div class="engage-container">
+                    <h2 class="engage-text">ENGAGE</h2>
+                    <div class="pulse-ring"></div>
+                </div>
+            </div>
+            <div class="loading-engine">
+                <div class="engine-text">LAUNCHING PORTAL</div>
+                <div class="dots-loader">
+                    <div class="dot dot1"></div>
+                    <div class="dot dot2"></div>
+                    <div class="dot dot3"></div>
+                    <div class="dot dot4"></div>
+                    <div class="dot dot5"></div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Website Content -->
+    <div id="main-content" class="hidden">
+        <!-- Header -->
+        <header class="glass-header">
+            <div class="header-container">
+                <div class="logo-container">
+                    <div class="logo-wrapper">
+                        <img src="https://iili.io/fyaZpEX.png" alt="Ndia TVC Logo" class="logo" 
+                             onerror="this.onerror=null; this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22><rect width=%22200%22 height=%22200%22 fill=%220a2463%22/><text x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2232%22 font-family=%22Arial%22>NDIA TVC</text></svg>'">
+                    </div>
+                    <div class="logo-text">
+                        <h1>Ndia Technical & Vocational College</h1>
+                        <p class="subtitle">Roadshow Portal 2026 | February 11-13</p>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <a href="https://ndiatvc.ac.ke/" target="_blank" class="official-btn">
+                        <span>Official Portal</span>
+                        <svg class="arrow-icon" viewBox="0 0 24 24">
+                            <path d="M18.25 15.5a.75.75 0 0 1-.75-.75v-9h-9a.75.75 0 0 1 0-1.5h9.5c.414 0 .75.336.75.75v9.5a.75.75 0 0 1-.75.75z"/>
+                            <path d="M15.25 18.25a.75.75 0 0 1-.53-.22l-10.5-10.5a.75.75 0 0 1 1.06-1.06l10.5 10.5a.75.75 0 0 1-.53 1.28z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <main class="dashboard">
+            <!-- About College Section -->
+            <section class="about-section glass-card">
+                <div class="section-header">
+                    <h2 class="section-title">About Our Institution</h2>
+                    <div class="title-line"></div>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <div class="college-badge">
+                            <span class="badge-icon">🏫</span>
+                            <span class="badge-text">ESTABLISHED</span>
+                        </div>
+                        
+                        <p class="lead-text">Ndia Technical and Vocational College is a premier institution dedicated to providing quality technical education and vocational training. Located in Kirinyaga County, Kenya, we empower youth with practical skills for sustainable development and career success.</p>
+                        
+                        <div class="info-grid">
+                            <div class="info-item">
+                                <div class="info-icon">📍</div>
+                                <div class="info-content">
+                                    <h4>Location</h4>
+                                    <p>Kirinyaga County, Kenya</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">🎯</div>
+                                <div class="info-content">
+                                    <h4>Vision</h4>
+                                    <p>To be a center of excellence in technical training</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">🤝</div>
+                                <div class="info-content">
+                                    <h4>Mission</h4>
+                                    <p>Providing quality technical education for all</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <div class="info-icon">📅</div>
+                                <div class="info-content">
+                                    <h4>Roadshow</h4>
+                                    <p>February 11-13, 2026</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-features">
+                        <h3>Our Core Values</h3>
+                        <div class="values-list">
+                            <div class="value-item glass-tag">
+                                <span class="value-icon">⚡</span>
+                                <span>Excellence</span>
+                            </div>
+                            <div class="value-item glass-tag">
+                                <span class="value-icon">🤲</span>
+                                <span>Integrity</span>
+                            </div>
+                            <div class="value-item glass-tag">
+                                <span class="value-icon">🌱</span>
+                                <span>Innovation</span>
+                            </div>
+                            <div class="value-item glass-tag">
+                                <span class="value-icon">👥</span>
+                                <span>Teamwork</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Courses Section -->
+            <section class="courses-section glass-card">
+                <div class="section-header">
+                    <h2 class="section-title">Our Courses</h2>
+                    <div class="title-line"></div>
+                </div>
+                
+                <div class="courses-grid">
+                    <div class="course-card">
+                        <div class="course-icon">🚗</div>
+                        <h3>Automotive Engineering</h3>
+                        <p>Vehicle maintenance, repair, and technology</p>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-icon">🏗️</div>
+                        <h3>Building Technology</h3>
+                        <p>Construction and architectural skills</p>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-icon">💼</div>
+                        <h3>Business Management</h3>
+                        <p>Entrepreneurship and business administration</p>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-icon">💅</div>
+                        <h3>Cosmetology</h3>
+                        <p>Beauty therapy and hair care</p>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-icon">⚡</div>
+                        <h3>Electrical Engineering</h3>
+                        <p>Electrical installation and maintenance</p>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-icon">👗</div>
+                        <h3>Fashion & Design</h3>
+                        <p>Clothing design and textile technology</p>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-icon">🏨</div>
+                        <h3>Hospitality</h3>
+                        <p>Hotel and catering management</p>
+                    </div>
+                    <div class="course-card">
+                        <div class="course-icon">💻</div>
+                        <h3>ICT & Computing</h3>
+                        <p>Computer science and information technology</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Gallery Section -->
+            <section class="gallery-section">
+                <div class="section-header">
+                    <h2 class="section-title">Campus Gallery</h2>
+                    <div class="title-line"></div>
+                </div>
+                
+                <div class="gallery-container">
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <img src="https://iili.io/fy7bqqF.jpg" alt="Campus View 1" loading="lazy">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://iili.io/fy7bJOQ.jpg" alt="Campus View 2" loading="lazy">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://iili.io/fy7Dm0u.jpg" alt="Campus View 3" loading="lazy">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://iili.io/fy7DPR4.jpg" alt="Campus View 4" loading="lazy">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://iili.io/fy7DvVt.jpg" alt="Campus View 5" loading="lazy">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://iili.io/fy7DNNp.jpg" alt="Campus View 6" loading="lazy">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://iili.io/fy7DGiF.jpg" alt="Campus View 7" loading="lazy">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://iili.io/fy7DEV1.jpg" alt="Campus View 8" loading="lazy">
+                            <div class="image-overlay"></div>
+                        </div>
+                        <div class="gallery-item">
+                            <img src="https://iili.io/fy7DcNV.jpg" alt="Campus View 9" loading="lazy">
+                            <div class="image-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Registration Check Section -->
+            <section class="check-section glass-card">
+                <div class="section-header">
+                    <h2 class="section-title">Check Roadshow Registration</h2>
+                    <div class="title-line"></div>
+                    <p class="section-subtitle">Enter your admission number to verify your registration status</p>
+                </div>
+                
+                <div class="check-container">
+                    <div class="input-group">
+                        <div class="input-wrapper">
+                            <div class="input-icon">🔍</div>
+                            <input 
+                                type="text" 
+                                id="searchInput" 
+                                placeholder="Enter Admission Number (e.g., 3639/WTL4-M/J26)"
+                                maxlength="50"
+                            >
+                            <div class="input-border"></div>
+                        </div>
+                        <button id="searchBtn" class="search-btn">
+                            <span>Check Registration</span>
+                            <div class="btn-icon">→</div>
+                        </button>
+                    </div>
+                    
+                    <div class="search-info">
+                        <div class="info-icon">ℹ️</div>
+                        <p>Enter your admission number exactly as shown in your documents</p>
+                    </div>
+                </div>
+                
+                <!-- Results Container -->
+                <div id="resultsContainer" class="results-container hidden">
+                    <div class="searching-overlay" id="searchingOverlay">
+                        <div class="searching-content">
+                            <div class="search-icon">🚌</div>
+                            <h3>Finding Your Details</h3>
+                            <div class="search-dots">
+                                <div class="search-dot"></div>
+                                <div class="search-dot"></div>
+                                <div class="search-dot"></div>
+                                <div class="search-dot"></div>
+                                <div class="search-dot"></div>
+                            </div>
+                            <p>Searching through roadshow registrations...</p>
+                        </div>
+                    </div>
+                    
+                    <div class="results-content hidden" id="resultsContent">
+                        <div class="result-header">
+                            <h3>Registration Details</h3>
+                            <div class="status-badge" id="statusBadge"></div>
+                        </div>
+                        
+                        <div class="student-details">
+                            <div class="detail-row">
+                                <span class="detail-label">Admission No:</span>
+                                <span class="detail-value" id="detailAdmNo"></span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Full Name:</span>
+                                <span class="detail-value" id="detailName"></span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Gender:</span>
+                                <span class="detail-value" id="detailGender"></span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Department:</span>
+                                <span class="detail-value" id="detailDept"></span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Roadshow Day:</span>
+                                <span class="detail-value" id="detailDay"></span>
+                            </div>
+                            <div class="detail-row">
+                                <span class="detail-label">Assigned Date:</span>
+                                <span class="detail-value" id="detailDate"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="result-actions">
+                            <button id="printBtn" class="action-btn">
+                                <span>Print Details</span>
+                                <div class="action-icon">🖨️</div>
+                            </button>
+                            <button id="closeBtn" class="action-btn secondary">
+                                <span>Close</span>
+                                <div class="action-icon">✕</div>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="no-results hidden" id="noResults">
+                        <div class="no-result-icon">😕</div>
+                        <h3>No Registration Found</h3>
+                        <p>The admission number you entered is not registered for the roadshow.</p>
+                        <p class="note-text">Please check the number and try again, or contact the administration.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer -->
+            <footer class="footer">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <div class="footer-logo-img">
+                            <img src="https://iili.io/fyaZpEX.png" alt="Ndia TVC Logo">
+                        </div>
+                        <div class="footer-info">
+                            <h3>Ndia Technical & Vocational College</h3>
+                            <p>Empowering Youth Through Technical Education</p>
+                        </div>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <a href="https://ndiatvc.ac.ke/" target="_blank" class="footer-link">
+                            Official Website
+                        </a>
+                        <span class="footer-separator">•</span>
+                        <a href="#" class="footer-link" id="contactLink">
+                            Contact Administration
+                        </a>
+                    </div>
+                    
+                    <div class="footer-legal">
+                        <p class="copyright">
+                            © 2026 Ndia TVC Roadshow Portal. All rights reserved.
+                        </p>
+                        <p class="developed-by">
+                            Developed by Mark Assistant | Portal closes on Friday February 14th, 2026
+                        </p>
+                        <p class="disclaimer">
+                            This portal is for official roadshow registrations only.
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <!-- Liquid Bubbles Effect -->
+    <div class="liquid-container">
+        <div class="bubble bubble-1"></div>
+        <div class="bubble bubble-2"></div>
+        <div class="bubble bubble-3"></div>
+        <div class="bubble bubble-4"></div>
+        <div class="bubble bubble-5"></div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div id="contactModal" class="modal hidden">
+        <div class="modal-content glass-card">
+            <div class="modal-header">
+                <h3>Contact Administration</h3>
+                <button class="modal-close" id="modalClose">✕</button>
+            </div>
+            <div class="modal-body">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>info@ndiatvc.ac.ke</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+254 7XX XXX XXX</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🏢</div>
+                        <div class="contact-details">
+                            <h4>Address</h4>
+                            <p>Ndia, Kirinyaga County, Kenya</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-note">
+                    <p>For roadshow inquiries, please visit the administration office during working hours.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

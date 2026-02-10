@@ -1,2 +1,0 @@
-# RD-SHOWX
-Empowering skills
