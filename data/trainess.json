@@ -1,0 +1,19 @@
+[
+  {
+    "admNo": "3639/WTL4-M/J26",
+    "name": "Michael Muchangi Kinyua",
+    "gender": "Male",
+    "department": "AUTOMOTIVE",
+    "day": "DAY 1",
+    "date": "Wednesday 11/02/2026"
+  },
+  {
+    "admNo": "3650/ATL5-M/J26",
+    "name": "Newton Maina Wambui",
+    "gender": "Male",
+    "department": "AUTOMOTIVE",
+    "day": "DAY 1",
+    "date": "Wednesday 11/02/2026"
+  }
+  // ... (All other trainees data from PDF)
+]
